@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .welcome-message {
+            margin-bottom: 30px;
+        }
+        .welcome-message h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .welcome-message p {
+            color: #666;
+            font-size: 18px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <div class="container">
+        <div class="welcome-message">
+            <h1>Домашня сторінка</h1>
+            <p>Ласкаво просимо до нашої системи відслідковування запасів в ресторані!</p>
+        </div>
+        <a href="{% url 'products' %}" class="btn">Переглянути продукти</a>
+    </div>
+{% endblock %}
